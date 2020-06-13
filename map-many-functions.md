@@ -1,9 +1,3 @@
----
-output: 
-  html_document:
-    keep_md: yes
----
-
 # Bodging: 'map()' many functions 
 
 Let me get you in on a little secret: `purrr::map*()` functions are __*weird*__.

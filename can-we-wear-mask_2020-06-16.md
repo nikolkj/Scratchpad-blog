@@ -1,6 +1,6 @@
 
 # <u> Can we start wearing masks again? </u>
-I am going to keep things quick, but I was hoping that we could all start wearing face-masks again ...\
+I am going to keep things light & breezy, but I was hoping that we could all start wearing face-masks again ...
 I don't know about how things are in your neck of the woods, but it looks like only 10-20% of people are wearing masks where I live. Ironically, the shelves local superstores are stocked with reasonably priced disposable masks. 
 
 For context -- Texas started re-opening a couple weeks ago and mixed signals are being sent regarding safety. We have state-level guidance, but the situation on the ground really depends the area. Additionally, although we hear alot about increased testing capacity at the national level, we really don't get much granular detail. 
@@ -13,13 +13,13 @@ Well, not super.
 
 ## **Data & Tools**
 * Using the most recent county population estimates from demographics.Texas.com.
-  - Data is labeled on the page as "2018" but the last estimate appears to be as of Jan 1, 2019.\
+  - Data is labeled on the page as "2018" but the last estimate appears to be as of Jan 1, 2019.
     Also, county FIPS codes appear off. Why can't we have nice data publications? 
   - Download [link](https://demographics.texas.gov/Resources/TPEPP/Estimates/2018/2018_txpopest_county.csv). 
   
 * Geo-spatial mapping courtesy of the urbnmapr package.This thing is super. 
   - [About page](https://medium.com/@urban_institute/how-to-create-state-and-county-maps-easily-in-r-577d29300bb2) on Medium.
-  - If you're on a Debian linux distro, you will likely have to download some additional system pacakges to get things to work.\
+  - If you're on a Debian linux distro, you will likely have to download some additional system pacakges to get things to work.
   See helpful [stack-overflow page](https://stackoverflow.com/questions/35647650/unable-to-install-package-car/35650554#35650554?newreg=2811e00f7f6d410c9c04097a1a80b800). 
   
 * Using daily cases & testing from my [TexasCovid-project](https://github.com/nikolkj/Texas-Covid/blob/master/README.md). Originally sourced from Texas DSHS. 
@@ -31,7 +31,7 @@ Well, not super.
 Excuse the lack of polish - I am cobbling things together from a couple of seperate scripts.
 
 ## **County Population Classification**
-County populations are log-norally distributed, so I am using standard deviation ranges to break-up the curve into different classes. Any counties above two (2) standard deviations from the mean are classified as "Urban", and it goes down from there.\
+County populations are log-norally distributed, so I am using standard deviation ranges to break-up the curve into different classes. Any counties above two (2) standard deviations from the mean are classified as "Urban", and it goes down from there.
 
 <br></br>
 Jump to the end of this section if you're not too interested in details.
@@ -142,7 +142,8 @@ lat_lims = c(min(pop_maps$lat, na.rm = TRUE),
 
 ### Classification: Results
 
-Things seem to make sense intuitively: Houston, Dallas, Austin, San Antonio and El Paso regions are classified as "Urban" and their neighboring counties are "Suburban".\
+Things seem to make sense intuitively: Houston, Dallas, Austin, San Antonio and El Paso regions are classified as "Urban" and their neighboring counties are "Suburban".
+
 I've dubbed everything in the `m-1*sd < x < m+1*sd` range as "Goldylocks" since it's right in the middle, above "Rural". 
 
 
@@ -419,8 +420,7 @@ dat_rates = dat_pop %>%
 ```
 
 <br></br>
-Population infection rates have been pretty stable for both "Urban" and "Suburban" regions with about 2 people per 1,000 contracting the virus, to-date. 
-Although this might not seem like much, consider how many people visit your local Walmart/Kroger/HEB every-day. 
+Population infection rates have been pretty stable for both "Urban" and "Suburban" regions with about 2 people per 1,000 contracting the virus, to-date. Although this might not seem like much, consider how many people visit your local Walmart/Kroger/HEB every-day. 
 <br></br>
 
 

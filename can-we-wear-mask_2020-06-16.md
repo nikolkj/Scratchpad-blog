@@ -1,9 +1,3 @@
----
-output: 
-  html_document:
-    keep_md: yes
----
-
 
 # <u> Can we start wearing masks again? </u>
 I am going to keep things quick, but I was hoping that we could all start wearing face-masks again ...\

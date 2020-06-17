@@ -360,7 +360,7 @@ head(dat_pop) %>%
 </tbody>
 </table>
 
-## **So how do things look?**
+## **How Do Things Look?**
 
 ### Cases
 

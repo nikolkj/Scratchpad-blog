@@ -427,7 +427,8 @@ dat_rates %>%
   scale_x_date(labels = scales::date_format(format = "%m/%d")) +
   xlab("") + ylab("") +
   labs(col = "County-type") +
-  ggtitle(label = "Pcnt. Infected by County-types", subtitle = "Texas Covid-19\nhttps://www.dshs.state.tx.us/coronavirus/additionaldata/") +
+  ggtitle(label = "Pcnt. Infected by County-types", 
+  subtitle = "Texas Covid-19\nhttps://www.dshs.state.tx.us/coronavirus/additionaldata/") +
   ggthemes::theme_fivethirtyeight() +
   theme(legend.text = element_text(size = 12), legend.position = "right", legend.direction = "vertical")
 ```
@@ -449,7 +450,8 @@ dat_rates %>%
   scale_x_date(labels = scales::date_format(format = "%m/%d")) +
   xlab("") + ylab("") +
   labs(NULL) +
-  ggtitle(label = "Daily Infection Rate by County-types", subtitle = "Texas Covid-19\nhttps://www.dshs.state.tx.us/coronavirus/additionaldata/") +
+  ggtitle(label = "Daily Infection Rate by County-types", 
+  subtitle = "Texas Covid-19\nhttps://www.dshs.state.tx.us/coronavirus/additionaldata/") +
   ggthemes::theme_fivethirtyeight() +
   theme(legend.position = "none") +
   facet_wrap(.~pop_group, scales = "free_y")
@@ -477,7 +479,8 @@ dat_rates %>%
   scale_x_date(labels = scales::date_format(format = "%m/%d")) +
   xlab("") + ylab("") +
   labs(col = "County-type") +
-  ggtitle(label = "Pcnt. Tested by County-types", subtitle = "Texas Covid-19\nhttps://www.dshs.state.tx.us/coronavirus/additionaldata/") +
+  ggtitle(label = "Pcnt. Tested by County-types", 
+  subtitle = "Texas Covid-19\nhttps://www.dshs.state.tx.us/coronavirus/additionaldata/") +
   ggthemes::theme_fivethirtyeight() +
   theme(legend.text = element_text(size = 12), legend.position = "right", legend.direction = "vertical")
 ```
@@ -496,7 +499,8 @@ dat_rates %>%
   scale_x_date(labels = scales::date_format(format = "%m/%d")) +
   xlab("") + ylab("") +
   labs(NULL) +
-  ggtitle(label = "Daily Testing Rate by County-types", subtitle = "Texas Covid-19\nhttps://www.dshs.state.tx.us/coronavirus/additionaldata/") +
+  ggtitle(label = "Daily Testing Rate by County-types", 
+  subtitle = "Texas Covid-19\nhttps://www.dshs.state.tx.us/coronavirus/additionaldata/") +
   ggthemes::theme_fivethirtyeight() +
   theme(legend.position = "none") +
   facet_wrap(.~pop_group, scales = "free_y")

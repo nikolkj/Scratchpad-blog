@@ -33,7 +33,6 @@ Excuse the lack of polish - I am cobbling things together from a couple of seper
 ## **County Population Classification**
 County populations are log-norally distributed, so I am using standard deviation ranges to break-up the curve into different classes. Any counties above two (2) standard deviations from the mean are classified as "Urban", and it goes down from there.
 
-<br></br>
 Jump to the end of this section if you're not too interested in details.
 
 ### Classification: Details
@@ -137,8 +136,6 @@ pop_maps = pop %>%
 lat_lims = c(min(pop_maps$lat, na.rm = TRUE), 
              max(pop_maps$lat, na.rm = TRUE))
 ```
-
-<br></br>
 
 ### Classification: Results
 
@@ -388,9 +385,8 @@ dat_pop %>%
 ![](can-we-wear-mask_2020-06-16_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 
-Now, what if we represent new cases and tests as fractions of the underlying populations?\
+Now, what if we represent new cases and tests as fractions of the underlying populations?
 Queue some more data-wrangling.
-<br></br>
 
 
 ```r
@@ -419,10 +415,7 @@ dat_rates = dat_pop %>%
          tested = cumsum(testing_rate))
 ```
 
-<br></br>
 Population infection rates have been pretty stable for both "Urban" and "Suburban" regions with about 2 people per 1,000 contracting the virus, to-date. Although this might not seem like much, consider how many people visit your local Walmart/Kroger/HEB every-day. 
-<br></br>
-
 
 ```r
 # Plot: Pcnt. Infected by County-types
@@ -441,14 +434,9 @@ dat_rates %>%
 
 ![](can-we-wear-mask_2020-06-16_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
-<br></br>
-
 Another thing to keep in mind is how case data is compiled. Overall testing is low (see below) regardless of region. Most cases are likely being tallied when people are sick enough to go see their doctor. Therefore, we are probably dealing with a sizeable under-report of actual cases. 
 
 Finally, it's fairly interesting how infection-rates accelerated for "Goldylocks" counties around the Memorial Day holiday. This is a guess, but the relatively lower population density in those counties probably makes people feel safer, leading to greater congregations during the holidays. Consequently, the percent of the population that's been infected in these regions is now on par with dense urban regions. Unfortunately, these regions have less local hospital capacitiy, so they may ironically carry a higher long-term mortality risk. 
-
-<br></br>
-
 
 
 ```r
@@ -496,10 +484,7 @@ dat_rates %>%
 
 ![](can-we-wear-mask_2020-06-16_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
-<br></br>
 Finally, there isn't any sort of trend in the daily-testing data. It's all extremely noisey, so any sustained increase in testing-capacity is yet to be reflected in the data.
-<br></br>
-
 
 ```r
 # Plot: Testing Rate by County-types  
